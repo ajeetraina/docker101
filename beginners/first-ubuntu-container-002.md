@@ -1,19 +1,19 @@
 # Running Your First Ubuntu Container
 
-```
+```bash
 docker run ubuntu date
 ```
 
 ## Accessing Shell inside Ubuntu container
 
-```
+```bash
 docker run -it ubuntu /bin/bash
 ```
 
 ## Provide hostname to Ubuntu container(using -h or --hostname)
 
-```
- docker run -h collabnix -i -t debian /bin/bash
+```bash
+docker run -h collabnix -i -t debian /bin/bash
 Unable to find image 'debian:latest' locally
 latest: Pulling from library/debian
 cc1a78bfd46b: Pull complete
@@ -25,8 +25,10 @@ collabnix
 
 ## Inspecting the Running Container
 
-```
-$ docker inspect a1b
+For inspecting, you needed the container id initials(check using `docker ps` or `docker ps -a`)
+
+```bash
+docker inspect a1b
 [
     {
         "Id": "a1bce73ff5ac652b1f60462010f3b0b219035f57f61fed2a37568b3209c51c55",
@@ -204,10 +206,10 @@ $ docker inspect a1b
 ]
 ```
 
-
 ## Displaying IP address
-```
-$ docker inspect a1b | grep IPAddress
+
+```bash
+docker inspect a1b | grep IPAddress
             "SecondaryIPAddresses": null,
             "IPAddress": "172.17.0.2",
                     "IPAddress": "172.17.0.2",
@@ -215,37 +217,32 @@ $ docker inspect a1b | grep IPAddress
 
 ## Displaying IP address using Filters
 
-```
-$ docker inspect --format {{.NetworkSettings.IPAddress}} a1b
-
+```bash
+docker inspect --format {{.NetworkSettings.IPAddress}} a1b
 ```
 
 ## How to check Logs
 
-```
-$ docker logs a1b
+```bash
+docker logs a1b
 root@collabnix:/# hostname
 collabnix
-
 ```
 
 ## Stopping the Container
 
-```
+```bash
 docker stop <containerid>
 ```
 
-## Cleaning up stopped containers 
+## Cleaning up stopped containers
 
-
-```
- $ docker rm -v $(docker ps -aq -f status=exited)
+```bash
+docker rm -v $(docker ps -aq -f status=exited)
 ```
 
 ## Stopping all containers
 
+```bash
+docker stop $(docker ps -a -q)
 ```
-$ docker stop $(docker ps -a -q)
-```
-
-## 

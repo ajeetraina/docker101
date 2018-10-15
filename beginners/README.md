@@ -18,7 +18,7 @@
 
 [Running a WordPress Blog Using Two Linked Containers](https://github.com/ajeetraina/docker101/tree/master/beginners/wordpress#running-a-wordpress-blog-using-two-linked-containerssingle-node-cluster)
 
-## Introduction to Docker Networking 
+## Introduction to Docker Networking
 
 [Introduction to Docker Networking](https://github.com/ajeetraina/docker101/blob/master/beginners/IntroToNetworkDocker.md)
 
@@ -44,9 +44,10 @@
 
 [How to assign IP address to container using MacVLAN](https://github.com/ajeetraina/docker101/blob/master/beginners/chap11.md#step-5-let-us-create-a-sample-docker-image-and-assign-statics-ipensure-that-it-is-from-free-pool)
 
+## Introduction to Docker Volumes
 
-## Introduction to Docker Volumes 
+[Introduction to Docker Volume](https://github.com/ajeetraina/docker101/blob/master/beginners/IntroToDockerVolume.md)
 
-[Introduction to Docker Volume](https://github.com/ajeetraina/docker101/blob/master/beginners/IntroToDockerVolume.md)<br>
-[Demonstrating Docker Volume](https://github.com/ajeetraina/docker101/blob/master/beginners/volume/demo-volume.md)<br>
-[Defining Volume under Dockerfile](https://github.com/ajeetraina/docker101/blob/master/beginners/volume/volume-dockerfile.md)<br>
+[Demonstrating Docker Volume](https://github.com/ajeetraina/docker101/blob/master/beginners/volume/demo-volume.md)
+
+[Defining Volume under Dockerfile](https://github.com/ajeetraina/docker101/blob/master/beginners/volume/volume-dockerfile.md)
