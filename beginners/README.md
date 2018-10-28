@@ -12,7 +12,7 @@
 
 [Running Your First Ubuntu Container](https://github.com/ajeetraina/docker101/blob/master/beginners/first-ubuntu-container-002.md)
 
-[Building Docker Image from Dockerfile](https://github.com/ajeetraina/docker101/blob/master/beginners/chap03.md)
+[Building Docker Image from Dockerfile](https://github.com/ajeetraina/docker101/blob/master/beginners/intro-to-dockerfile-003.md)
 
 [Running WordPress in a single Docker Container](https://github.com/ajeetraina/docker101/tree/master/beginners/wordpress/single-node)
 
