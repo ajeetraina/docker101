@@ -32,7 +32,7 @@
 
 [What is command to get just an IP address of the running container?](https://github.com/ajeetraina/docker101/blob/master/beginners/Bridge-Networks.md#default-bridge-network)
 
-[How to disallow one container not to talk to another container](https://github.com/ajeetraina/docker101/blob/master/beginners/Chap08.md#linux-network-namespace-introduction)
+[How to disallow one container not to talk to another container](https://github.com/ajeetraina/docker101/blob/master/beginners/network-namespace-009.md)
 
 [How to assign Static IP address to a Container](https://github.com/ajeetraina/docker101/blob/master/beginners/IntroToNetworkDocker.md#1-how-to-assign-static-ip-address-to-a-container)
 
@@ -42,7 +42,7 @@
 
 [What is MacVLAN and why do we need it?](https://github.com/ajeetraina/docker101/blob/master/beginners/MacVlan.md)
 
-[How to assign IP address to container using MacVLAN](https://github.com/ajeetraina/docker101/blob/master/beginners/chap11.md#step-5-let-us-create-a-sample-docker-image-and-assign-statics-ipensure-that-it-is-from-free-pool)
+[How to assign IP address to container using MacVLAN](https://github.com/ajeetraina/docker101/blob/master/beginners/macvlan-010.md)
 
 
 ## Introduction to Docker Volumes 
