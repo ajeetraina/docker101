@@ -1,4 +1,4 @@
-# Mcvlan network
+# Macvlan network
 
 Traffic flows through eth0 and Docker routes traffic to your container using its MAC address. To network devices on your network, your container appears to be physically attached to the network.
 
