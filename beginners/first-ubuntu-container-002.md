@@ -248,6 +248,12 @@ docker stop <containerid>
 $ docker stop $(docker ps -a -q)
 ```
 
+## Remove all stopped containers
+
+```
+$ docker container prune
+```
+
 ## 
 
 
