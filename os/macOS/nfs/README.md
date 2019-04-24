@@ -1,19 +1,18 @@
 # Docker for Mac 18.03.0 now comes with NFS Volume Sharing Support for Kubernetes
 
-# Pre-requisite:
+## Pre-requisite
 
 - Install Docker for Mac 18.03
 
-
-# Getting Started
+## Getting Started
 
 ## Execute the below script on your macOS system
 
-```
+```bash
 sh env_vars.sh
 ```
 
-```
+```bash
 sh setup_native_nfs_docker_osx.sh
 
  +-----------------------------+
@@ -37,16 +36,16 @@ Starting the nfsd service
 SUCCESS! Now go run your containers 🐳
 ```
 
-# Bringing up Your Application
+## Bringing up Your Application
 
-```
+```bash
 docker stack deploy -c docker-compose.yml myapp2
  docker stack ls
 NAME                SERVICES
 myapp2                1
 ```
 
-```
+```bash
 [Captains-Bay]🚩 >  kubectl get po
 NAME      READY     STATUS    RESTARTS   AGE
 web-0     1/1       Running   0          3m
@@ -56,8 +55,7 @@ kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP     1d
 web          ClusterIP   None         <none>        55555/TCP   3m
 ```
 
-
-```
+```bash
 [Captains-Bay]🚩 >  kubectl describe po web-0
 Name:           web-0
 Namespace:      default
@@ -116,8 +114,10 @@ Events:
   Normal  Pulled                 5m    kubelet, docker-for-desktop  Container image "alpine:3.6" already present on machine
   Normal  Created                5m    kubelet, docker-for-desktop  Created container
   Normal  Started                5m    kubelet, docker-for-desktop  Started container
-  ```
+```
 
+References:
 
-Reference:
-- https://github.com/firepress-org/Docker-For-Mac-with-Native-NFS
+- [Docker Forum Discussion](https://forums.docker.com/t/nfs-native-support/48531)
+
+- [Set Up Docker For Mac with Native NFS](https://medium.com/@sean.handley/how-to-set-up-docker-for-mac-with-native-nfs-145151458adc)

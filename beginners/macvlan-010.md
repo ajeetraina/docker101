@@ -2,7 +2,7 @@
 
 Assume you have a clean Docker Host system with just 3 networks available – bridge, host and null
 
-```
+```bash
 root@ubuntu:~# docker network ls
 NETWORK ID          NAME                DRIVER              SCOPE
 871f1f745cc4        bridge              bridge              local
@@ -13,7 +13,7 @@ root@ubuntu:~#
 
 My Network Configuration is quite simple. It has eth0 and eth1 interface. I will just use eth0.
 
-```
+```bash
 root@ubuntu:~# ifconfig
 docker0   Link encap:Ethernet  HWaddr 02:42:7d:83:13:8e
           inet addr:172.17.0.1  Bcast:172.17.255.255  Mask:255.255.0.0
@@ -45,13 +45,13 @@ lo        Link encap:Local Loopback
 
 ## Step:3 – Creating MacVLAN network on top of eth0.
 
-```
+```bash
 docker network create -d macvlan --subnet=100.98.26.43/24 --gateway=100.98.26.1  -o parent=eth0 pub_net
 ```
 
 ## Step-4: Verifying MacVLAN network
 
-```
+```bash
 root@ubuntu:~# docker network ls
 NETWORK ID          NAME                DRIVER              SCOPE
 871f1f745cc4        bridge              bridge              local
@@ -63,7 +63,7 @@ root@ubuntu:~#
 
 ## Step-5: Let us create a sample Docker Image and assign statics IP(ensure that it is from free pool)
 
-```
+```bash
 root@ubuntu:~# docker  run --net=pub_net --ip=100.98.26.47 -itd alpine /bin/sh
 Unable to find image 'alpine:latest' locally
 latest: Pulling from library/alpine
@@ -83,17 +83,15 @@ Example: ip link add mac0 link $PARENTDEV type macvlan mode bridge
 
 So, in our case, it will be:
 
-```
+```bash
 ip link add mac0 link eth0 type macvlan mode bridge
 ip addr add 100.98.26.38/24 dev mac0
 ifconfig mac0 up
 ```
 
-
-
 Let us try creating container and pinging:
 
-```
+```bash
 root@ubuntu:~# docker run --net=pub_net -d --ip=100.98.26.53 -p 81:80 nginx
 10146a39d7d8839b670fc5666950c0e265037105e61b0382575466cc62d34824
 root@ubuntu:~# ping 100.98.26.53
@@ -103,4 +101,3 @@ PING 100.98.26.53 (100.98.26.53) 56(84) bytes of data.
 ```
 
 Wow ! It just worked.
-

@@ -1,11 +1,10 @@
+# The docker run CLI comes with --init and --init-path options. What is it
 
-# The docker run CLI comes with --init and --init-path options. What is it?
-
-## Have you heard about Tini?
+## Have you heard about Tini
 
 Tini is the simplest init you could think of. All Tini does is spawn a single child (Tini is meant to be run in a container), and wait for it to exit all the while reaping zombies and performing signal forwarding.
 
-## Why Tini?
+## Why Tini
 
 Using Tini has several benefits:
 
@@ -26,7 +25,7 @@ Add Tini to your container, and make it executable. Then, just invoke Tini and p
 
 In Docker, you will want to use an entrypoint so you don't have to remember to manually invoke Tini:
 
-## Wait  ! Wait ! Wait... Why are you talking about this?
+## Wait  ! Wait ! Wait... Why are you talking about this
 
 Good Question !
 
@@ -66,8 +65,8 @@ Hope this helps!
 
 Here are some references you might be interested in to learn more about that topic:
 
-More about zombies: https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/
-A more succinct explanation https://github.com/docker-library/official-images#init
+More about zombies: [Docker and the pid 1 zombie reaping problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/)
+ and [a more succinct explanation](https://github.com/docker-library/official-images#init).
 Finally, do note that there are alternatives to Tini (like Phusion's base image).
 
 Tini differentiates with:
