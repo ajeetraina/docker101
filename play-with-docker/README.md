@@ -3,7 +3,7 @@
 
 ## Pre-requisite:
 
-- Follow [Docker101](https://github.com/ajeetraina/docker101/README.md) instructions before you follow these examples:
+- Follow [Docker101](https://github.com/shendrekbharath/docker101/blob/master/README.md) instructions before you follow these examples:
 
 ## List of Applications for the demonstration 
 
