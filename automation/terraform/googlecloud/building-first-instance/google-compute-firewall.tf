@@ -10,3 +10,4 @@ resource "google_compute_firewall" "ssh" {
     protocol = "tcp"
     ports    = ["22", "80", "443"]
   }
+}
