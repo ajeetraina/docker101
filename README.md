@@ -1,5 +1,7 @@
 # Docker for You (DFY)
 
+** THIS IS AN OLD REPOSITORY. Please refer [DockerLabs](http://dockerlabs.collabnix.com) if you want to get started with Docker] **
+
 Are you new to Docker? Want to build your career in Container Technology?
 
 Then Welcome ! You are at the right place.
